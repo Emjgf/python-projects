@@ -1,0 +1,117 @@
+# Calculadora IMC
+peso = float(input("Introduce tu peso en kilogramos: "))
+altura = float(input("Introduce tu altura en metros: "))
+
+imc = peso / (altura ** 2)
+ 
+print(f"Tu IMC es: {imc:.2f}")
+
+
+###################################################################################################################################
+#calculadora temp
+print ("Conversor de Celsius a Fahrenheit")
+
+celsius = float(input("Introduce la temperatura en grados Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+
+print(f"La temperatura en grados Fahrenheit es: {fahrenheit:.2f}")
+
+
+##########################################################################################################################################
+#calculadora desc
+precioriginal = float(input("Introduce el precio original del producto: "))
+descuento = float(input("Introduce el porcentaje de descuento: "))
+
+preciofinal = precioriginal - (precioriginal * descuento / 100)
+
+print(f"El precio final después de aplicar el descuento es: {preciofinal:.2f}")
+
+
+##########################################################################################################################################
+#Calculadora cuentas
+propinas = []
+
+while True:
+    
+    totalcuenta = float(input("Introduce el monto de la cuenta (o 0 para terminar): "))
+    
+    if totalcuenta == 0:
+        break
+    
+    
+    porcentajepropina = float(input("Introduce el porcentaje de propina: "))
+    propina = totalcuenta * (porcentajepropina / 100)
+    propinas.append(propina)
+    
+    print(f"El monto de la propina para esta cuenta es: {propina:.2f}")
+
+totalpropinas = sum(propinas)
+
+print(f"El monto total de todas las propinas es: {totalpropinas:.2f}")
+
+
+########################################################################################################################################################
+#Calculadora de anos
+ano_nacimiento = int(input("Introduce tu ano de nacimiento: "))
+
+ano_actual = int(input("Introduce el ano actual: "))
+edad = ano_actual - ano_nacimiento
+
+print(f"Tienes {edad} anos.")
+
+########################################################################################################################################################
+#calculadora energia
+masa = float(input("Introduce la masa del objeto en kilogramos: "))
+velocidad = float(input("Introduce la velocidad del objeto en metros por segundo: "))
+
+energia_cinetica = 0.5 * masa * (velocidad ** 2)
+
+print(f"La energía cinética del objeto es {energia_cinetica:.2f} julios.")
+
+########################################################################################################################################################
+#calculadora fuerza gra
+
+
+G = 6.67430 * (10 ** (-11))
+
+masa1 = float(input("Introduce la masa del primer objeto en kilogramos: "))
+masa2 = float(input("Introduce la masa del segundo objeto en kilogramos: "))
+
+distancia = float(input("Introduce la distancia entre los dos objetos en metros: "))
+fuerza = (G * masa1 * masa2) / (distancia ** 2)
+
+print(f"La fuerza gravitacional entre los objetos es {fuerza:.2f} newtons.")
+
+
+########################################################################################################################################################
+#calculadora mru
+
+posicion_inicial = float(input("Introduce la posición inicial del objeto en metros: "))
+velocidad = float(input("Introduce la velocidad del objeto en metros por segundo: "))
+tiempo = float(input("Introduce el tiempo en segundos: "))
+
+posicion_final = posicion_inicial + velocidad * tiempo
+
+print(f"La posición final del objeto es {posicion_final:.2f} metros.")
+
+
+
+########################################################################################################################################################
+#calculadora pendulo
+
+import math
+
+longitud = float(input("Introduce la longitud del péndulo en metros: "))
+periodo = 2 * math.pi * math.sqrt(longitud / 9.81)
+
+print(f"El periodo del péndulo es {periodo:.2f} segundos.")
+
+
+########################################################################################################################################################
+#calculadora ohm
+resistencia = float(input("Introduce la resistencia del circuito en ohmios: "))
+corriente = float(input("Introduce la corriente del circuito en amperios: "))
+
+voltaje = resistencia * corriente
+
+print(f"El voltaje del circuito es {voltaje:.2f} voltios.")
